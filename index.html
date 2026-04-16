@@ -10,6 +10,7 @@
             --indigo: #294355;
             --light-blue: #D7EDFC;
             --white: #ffffff;
+            --pink: #FF97A4;
             --serif: "Georgia", "Times New Roman", Times, serif;
             --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
@@ -99,14 +100,16 @@
             opacity: 0.5;
         }
 
-        /* Grid */
+        /* Grid - Fixed Alignment */
         .yearbook-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto 100px;
             padding: 0 20px;
+            justify-content: center;
+            justify-items: center;
         }
 
         .star-card {
@@ -122,6 +125,9 @@
             border: 1px solid rgba(255, 255, 255, 0.5);
             box-shadow: 0 15px 50px -15px rgba(41, 67, 85, 0.1);
             cursor: pointer;
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
         }
 
         .star-card:hover {
@@ -182,19 +188,25 @@
             font-size: 2.5rem;
             font-weight: 300;
             margin: 0 0 5px;
+            text-align: center;
         }
 
+        /* Tag Styles */
         .tag {
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-weight: 700;
-            background: var(--light-blue);
             padding: 8px 16px;
             border-radius: 20px;
             margin-bottom: 30px;
             color: var(--indigo);
+            text-align: center;
         }
+
+        .tag-impact { background: var(--gold); }
+        .tag-excellence { background: var(--pink); }
+        .tag-growth { background: var(--light-blue); }
 
         .reveal-btn {
             margin-top: auto;
@@ -264,7 +276,7 @@
                 <div class="crown-badge">🏆</div>
             </div>
             <h2 class="star-name">Taylor Gleason</h2>
-            <span class="tag">Q1 Impact Star</span>
+            <span class="tag tag-impact">Q1 Impact Star</span>
             <div class="reveal-btn">Reveal Moments <span>✨</span></div>
         </div>
 
@@ -276,7 +288,7 @@
                 <div class="crown-badge">🏆</div>
             </div>
             <h2 class="star-name">Lisa Palmerino</h2>
-            <span class="tag">Q1 CS Excellence Star</span>
+            <span class="tag tag-excellence">Q1 CS Excellence Star</span>
             <div class="reveal-btn">Reveal Moments <span>✨</span></div>
         </div>
 
@@ -288,14 +300,14 @@
                 <div class="crown-badge">🏆</div>
             </div>
             <h2 class="star-name">Bryan Min</h2>
-            <span class="tag">Q1 Growth Star</span>
+            <span class="tag tag-growth">Q1 Growth Star</span>
             <div class="reveal-btn">Reveal Moments <span>✨</span></div>
         </div>
     </main>
 
     <footer class="main-footer">
         <div class="footer-badge">
-            <span class="heart" style="color: #FF97A4">❤</span> Built for the GTM Class of 2026
+            <span class="heart" style="color: var(--pink)">❤</span> Built for the GTM Class of 2026
         </div>
     </footer>
 
