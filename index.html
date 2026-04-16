@@ -51,7 +51,6 @@
             display: block;
         }
 
-        /* Fallback for when logo.png isn't found in preview */
         .logo-placeholder {
             font-family: var(--serif);
             font-weight: bold;
@@ -130,7 +129,6 @@
             box-shadow: 0 30px 70px -10px rgba(255, 193, 76, 0.2);
         }
 
-        /* Image Frames */
         .image-frame {
             position: relative;
             margin-bottom: 40px;
@@ -160,10 +158,10 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             position: relative;
             z-index: 2;
-            background: #eee; /* Placeholder color */
+            background: #eee;
         }
 
-        .badge {
+        .crown-badge {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -183,7 +181,7 @@
             font-family: var(--serif);
             font-size: 2.5rem;
             font-weight: 300;
-            margin: 0 0 10px;
+            margin: 0 0 5px;
         }
 
         .tag {
@@ -195,6 +193,7 @@
             padding: 8px 16px;
             border-radius: 20px;
             margin-bottom: 30px;
+            color: var(--indigo);
         }
 
         .reveal-btn {
@@ -238,8 +237,7 @@
 
     <header class="hero">
         <div class="logo-container">
-            <!-- Fallback text if logo doesn't load in preview -->
-           <img src="/images/logo.png" alt="Eleos Stars Logo" class="main-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <img src="/images/logo.png" alt="Eleos Stars Logo" class="main-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
             <div class="logo-placeholder" style="display:none;">ELEOS STARS</div>
         </div>
         
@@ -259,38 +257,38 @@
 
     <main class="yearbook-grid">
         <!-- Star: Taylor -->
-       <div class="star-card" onclick="window.location.href='taylor.html'">
+        <div class="star-card" onclick="window.location.href='taylor.html'">
             <div class="image-frame">
                 <div class="dashed-ring"></div>
-                <img src="images/taylor.png" alt="Taylor" onerror="this.src='https://via.placeholder.com/200?text=Taylor'">
-                <div class="badge">🏆</div>
+                <img src="/images/taylor.png" alt="Taylor Gleason" onerror="this.src='https://via.placeholder.com/200?text=Taylor'">
+                <div class="crown-badge">🏆</div>
             </div>
-            <h2 class="star-name">Taylor</h2>
-            <span class="tag">Q1 Eleos Star</span>
+            <h2 class="star-name">Taylor Gleason</h2>
+            <span class="tag">Q1 Impact Star</span>
             <div class="reveal-btn">Reveal Moments <span>✨</span></div>
         </div>
 
         <!-- Star: Lisa -->
-       <div class="star-card" onclick="window.location.href='lisa.html'">
-    <div class="image-frame">
-        <div class="dashed-ring"></div>
-        <img src="/images/lisa.png" alt="Lisa" onerror="this.src='https://via.placeholder.com/200?text=Lisa'">
-        <div class="badge">🏆</div>
-    </div>
-    <h2 class="star-name">Lisa</h2>
-    <span class="tag">Q1 Eleos Star</span>
-    <div class="reveal-btn">Reveal Moments <span>✨</span></div>
-</div>
+        <div class="star-card" onclick="window.location.href='lisa.html'">
+            <div class="image-frame">
+                <div class="dashed-ring"></div>
+                <img src="/images/lisa.png" alt="Lisa Palmerino" onerror="this.src='https://via.placeholder.com/200?text=Lisa'">
+                <div class="crown-badge">🏆</div>
+            </div>
+            <h2 class="star-name">Lisa Palmerino</h2>
+            <span class="tag">Q1 CS Excellence Star</span>
+            <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+        </div>
 
         <!-- Star: Bryan -->
         <div class="star-card" onclick="window.location.href='bryan.html'">
             <div class="image-frame">
                 <div class="dashed-ring"></div>
-                <img src="images/bryan.png" alt="Bryan" onerror="this.src='https://via.placeholder.com/200?text=Bryan'">
-                <div class="badge">🏆</div>
+                <img src="/images/bryan.png" alt="Bryan Min" onerror="this.src='https://via.placeholder.com/200?text=Bryan'">
+                <div class="crown-badge">🏆</div>
             </div>
-            <h2 class="star-name">Bryan</h2>
-            <span class="tag">Q1 Eleos Star</span>
+            <h2 class="star-name">Bryan Min</h2>
+            <span class="tag">Q1 Growth Star</span>
             <div class="reveal-btn">Reveal Moments <span>✨</span></div>
         </div>
     </main>
