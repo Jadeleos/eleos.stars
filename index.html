@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleos Stars | Class of 2026</title>
+    <style>
+        :root {
+            --gold: #FFC14C;
+            --indigo: #294355;
+            --light-blue: #D7EDFC;
+            --white: #ffffff;
+            --serif: "Georgia", "Times New Roman", Times, serif;
+            --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--light-blue);
+            color: var(--indigo);
+            font-family: var(--sans);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .italic { font-style: italic; }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 20px 60px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            background: var(--white);
+            display: inline-block;
+            padding: 30px;
+            border-radius: 40px;
+            box-shadow: 0 10px 40px rgba(41, 67, 85, 0.05);
+            margin-bottom: 50px;
+        }
+
+        .main-logo {
+            height: 90px;
+            width: auto;
+            display: block;
+        }
+
+        /* Fallback for when logo.jpg isn't found in preview */
+        .logo-placeholder {
+            font-family: var(--serif);
+            font-weight: bold;
+            color: var(--indigo);
+            font-size: 24px;
+        }
+
+        .serif-title {
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin: 0 0 30px;
+        }
+
+        .underline-accent {
+            position: relative;
+            display: inline-block;
+        }
+
+        .underline-accent::after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 10px;
+            opacity: 0.4;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        .star-deco {
+            margin-top: 40px;
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 15px;
+            opacity: 0.5;
+        }
+
+        /* Grid */
+        .yearbook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 40px auto 100px;
+            padding: 0 20px;
+        }
+
+        .star-card {
+            background: var(--white);
+            padding: 50px 30px;
+            border-radius: 60px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 15px 50px -15px rgba(41, 67, 85, 0.1);
+            cursor: pointer;
+        }
+
+        .star-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 70px -10px rgba(255, 193, 76, 0.2);
+        }
+
+        /* Image Frames */
+        .image-frame {
+            position: relative;
+            margin-bottom: 40px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .dashed-ring {
+            position: absolute;
+            inset: -20px;
+            border: 2px dashed var(--gold);
+            border-radius: 50%;
+            opacity: 0.2;
+            transition: transform 10s linear;
+        }
+
+        .star-card:hover .dashed-ring {
+            transform: rotate(90deg);
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid var(--white);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+            background: #eee; /* Placeholder color */
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--white);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 3;
+            font-size: 20px;
+        }
+
+        .star-name {
+            font-family: var(--serif);
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin: 0 0 10px;
+        }
+
+        .tag {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            background: var(--light-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .reveal-btn {
+            margin-top: auto;
+            width: 100%;
+            background: var(--indigo);
+            color: var(--white);
+            padding: 18px;
+            border-radius: 25px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .star-card:hover .reveal-btn {
+            background: var(--gold);
+            color: var(--indigo);
+        }
+
+        .main-footer { padding: 60px 0; text-align: center; }
+        .footer-badge {
+            background: white;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="logo-container">
+            <!-- Fallback text if logo doesn't load in preview -->
+            <img src="images/logo.jpg" alt="Eleos Stars Logo" class="main-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <div class="logo-placeholder" style="display:none;">ELEOS STARS</div>
+        </div>
+        
+        <h1 class="serif-title">
+            Celebrating <span class="italic">Elite Performance</span> <br> 
+            <span class="underline-accent">across our GTM Teams</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+            We are incredibly proud of your impact and creating the <span class="italic">standard of excellence</span> at Eleos.
+        </p>
+
+        <div class="star-deco">
+            <span>✦</span><span>✦</span><span>✦</span>
+        </div>
+    </header>
+
+    <main class="yearbook-grid">
+        <!-- Star: Taylor -->
+        <div class="star-card" onclick="alert('In the live site, this goes to taylor.html')">
+            <div class="image-frame">
+                <div class="dashed-ring"></div>
+                <img src="images/taylor.jpg" alt="Taylor" onerror="this.src='https://via.placeholder.com/200?text=Taylor'">
+                <div class="badge">🏆</div>
+            </div>
+            <h2 class="star-name">Taylor</h2>
+            <span class="tag">Q1 Eleos Star</span>
+            <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+        </div>
+
+        <!-- Star: Lisa -->
+        <div class="star-card" onclick="alert('In the live site, this goes to lisa.html')">
+            <div class="image-frame">
+                <div class="dashed-ring"></div>
+                <img src="images/lisa.jpg" alt="Lisa" onerror="this.src='https://via.placeholder.com/200?text=Lisa'">
+                <div class="badge">🏆</div>
+            </div>
+            <h2 class="star-name">Lisa</h2>
+            <span class="tag">Q1 Eleos Star</span>
+            <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+        </div>
+
+        <!-- Star: Bryan -->
+        <div class="star-card" onclick="alert('In the live site, this goes to bryan.html')">
+            <div class="image-frame">
+                <div class="dashed-ring"></div>
+                <img src="images/bryan.jpg" alt="Bryan" onerror="this.src='https://via.placeholder.com/200?text=Bryan'">
+                <div class="badge">🏆</div>
+            </div>
+            <h2 class="star-name">Bryan</h2>
+            <span class="tag">Q1 Eleos Star</span>
+            <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-badge">
+            <span class="heart" style="color: #FF97A4">❤</span> Built for the GTM Class of 2026
+        </div>
+    </footer>
+
+</body>
+</html>
