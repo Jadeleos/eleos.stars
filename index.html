@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -106,7 +106,7 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
             max-width: 1200px;
-            margin: 40px auto 100px;
+            margin: 20px auto 60px;
             padding: 0 20px;
             justify-content: center;
             justify-items: center;
@@ -267,41 +267,81 @@
         </div>
     </header>
 
-    <main class="yearbook-grid">
-        <!-- Star: Taylor -->
-        <div class="star-card" onclick="window.location.href='taylor.html'">
-            <div class="image-frame">
-                <div class="dashed-ring"></div>
-                <img src="/images/taylor.png" alt="Taylor Gleason" onerror="this.src='https://via.placeholder.com/200?text=Taylor'">
-                <div class="crown-badge">🏆</div>
+    <main>
+        <h2 style="text-align: center; font-family: var(--serif); font-size: 2.5rem; font-weight: 400; margin-top: 20px; margin-bottom: 10px; color: var(--indigo);">Q2 Cohort</h2>
+        <div style="width: 50px; border-top: 4px solid var(--gold); margin: 0 auto 30px; border-radius: 10px;"></div>
+
+        <div class="yearbook-grid">
+            <div class="star-card" onclick="window.location.href='elise.html'">
+                <div class="image-frame">
+                    <div class="dashed-ring"></div>
+                    <img src="/images/elise.png" alt="Elise Witek" onerror="this.src='https://via.placeholder.com/200?text=Elise'">
+                    <div class="crown-badge">🏆</div>
+                </div>
+                <h2 class="star-name">Elise Witek</h2>
+                <span class="tag tag-impact">Q2 Star Achievement</span>
+                <div class="reveal-btn">Reveal Moments <span>✨</span></div>
             </div>
-            <h2 class="star-name">Taylor Gleason</h2>
-            <span class="tag tag-impact">Q1 Impact Star</span>
-            <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+
+            <div class="star-card" onclick="window.location.href='simara.html'">
+                <div class="image-frame">
+                    <div class="dashed-ring"></div>
+                    <img src="/images/simara.png" alt="Simara Rosa" onerror="this.src='https://via.placeholder.com/200?text=Simara'">
+                    <div class="crown-badge">🏆</div>
+                </div>
+                <h2 class="star-name">Simara Rosa</h2>
+                <span class="tag tag-excellence">Q2 Star Achievement</span>
+                <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+            </div>
+
+            <div class="star-card" onclick="window.location.href='chris.html'">
+                <div class="image-frame">
+                    <div class="dashed-ring"></div>
+                    <img src="/images/chris.png" alt="Chris Klecic" onerror="this.src='https://via.placeholder.com/200?text=Chris'">
+                    <div class="crown-badge">🏆</div>
+                </div>
+                <h2 class="star-name">Chris Klecic</h2>
+                <span class="tag tag-growth">Q2 Marketing Star</span>
+                <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+            </div>
         </div>
 
-        <!-- Star: Lisa -->
-        <div class="star-card" onclick="window.location.href='lisa.html'">
-            <div class="image-frame">
-                <div class="dashed-ring"></div>
-                <img src="/images/lisa.png" alt="Lisa Palmerino" onerror="this.src='https://via.placeholder.com/200?text=Lisa'">
-                <div class="crown-badge">🏆</div>
-            </div>
-            <h2 class="star-name">Lisa Palmerino</h2>
-            <span class="tag tag-excellence">Q1 CS Excellence Star</span>
-            <div class="reveal-btn">Reveal Moments <span>✨</span></div>
-        </div>
+        <h2 style="text-align: center; font-family: var(--serif); font-size: 2.3rem; font-weight: 400; margin-top: 80px; margin-bottom: 10px; color: var(--indigo); opacity: 0.7;">Q1 Cohort</h2>
+        <div style="width: 50px; border-top: 4px solid var(--gold); margin: 0 auto 30px; border-radius: 10px; opacity: 0.7;"></div>
 
-        <!-- Star: Bryan -->
-        <div class="star-card" onclick="window.location.href='bryan.html'">
-            <div class="image-frame">
-                <div class="dashed-ring"></div>
-                <img src="/images/bryan.png" alt="Bryan Min" onerror="this.src='https://via.placeholder.com/200?text=Bryan'">
-                <div class="crown-badge">🏆</div>
+        <div class="yearbook-grid" style="margin-bottom: 100px; opacity: 0.9;">
+            <div class="star-card" onclick="window.location.href='taylor.html'">
+                <div class="image-frame">
+                    <div class="dashed-ring"></div>
+                    <img src="/images/taylor.png" alt="Taylor Gleason" onerror="this.src='https://via.placeholder.com/200?text=Taylor'">
+                    <div class="crown-badge">🏆</div>
+                </div>
+                <h2 class="star-name">Taylor Gleason</h2>
+                <span class="tag tag-impact">Q1 Impact Star</span>
+                <div class="reveal-btn">Reveal Moments <span>✨</span></div>
             </div>
-            <h2 class="star-name">Bryan Min</h2>
-            <span class="tag tag-growth">Q1 Growth Star</span>
-            <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+
+            <div class="star-card" onclick="window.location.href='lisa.html'">
+                <div class="image-frame">
+                    <div class="dashed-ring"></div>
+                    <img src="/images/lisa.png" alt="Lisa Palmerino" onerror="this.src='https://via.placeholder.com/200?text=Lisa'">
+                    <div class="crown-badge">🏆</div>
+                </div>
+                <h2 class="star-name">Lisa Palmerino</h2>
+                <span class="tag tag-excellence">Q1 CS Excellence Star</span>
+                <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+            </div>
+
+            <div class="star-card" onclick="window.location.href='bryan.html'">
+                <div class="image-frame">
+                    <div class="dashed-ring"></div>
+                    <img src="/images/bryan.png" alt="Bryan Min" onerror="this.src='https://via.placeholder.com/200?text=Bryan'">
+                    <div class="crown-badge">🏆</div>
+                </div>
+                <h2 class="star-name">Bryan Min</h2>
+                <span class="tag tag-growth">Q1 Growth Star</span>
+                <div class="reveal-btn">Reveal Moments <span>✨</span></div>
+            </div>
         </div>
     </main>
 
