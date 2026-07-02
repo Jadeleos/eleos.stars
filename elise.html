@@ -107,3 +107,112 @@
             padding: 80px 100px;
             border-radius: 60px;
             margin-top: 80px;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-family: var(--serif);
+            font-size: 1.8rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .attribution {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.5;
+        }
+
+        .moments-section {
+            grid-column: 1 / -1;
+            padding: 100px 0;
+        }
+
+        .moments-title {
+            font-family: var(--serif);
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+
+        .moments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .moment-card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--gold);
+        }
+
+        .moment-card strong {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--indigo);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; text-align: center; }
+            .name-title h1 { font-size: 3rem; }
+            .message-box { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="index.html" class="back-link">← Back to Class</a>
+        <img src="/images/logo.png" alt="Eleos Logo" class="nav-logo">
+    </nav>
+
+    <main class="container">
+        <div class="name-title">
+            <span class="badge">Q2 Star Achievement</span>
+            <h1>Elise Witek</h1>
+            <h2>Sr. Account Executive</h2>
+        </div>
+
+        <div class="profile-frame">
+            <img src="/images/elise.png" alt="Elise Witek" class="profile-img">
+        </div>
+
+        <section class="message-box">
+            <div class="quote-text">
+                "Elise, you just delivered one of the best quarters any Account Executive has ever had here at Eleos. Closing 8 individual deals valued at $570,000 didn't just blow past your quarterly goal—it set an entirely new standard of excellence. What makes this achievement even more incredible is the unwavering consistency you demonstrated all quarter long, making you our highest-achieving AE this year by a wide margin. Beyond the phenomenal numbers, your willingness to step up when the team most needed stability, combined with your dedication to mentoring and helping our new AEs smoothly onboard, shows the true depth of your leadership. Thank you for continuing to lead by example and lifting up the entire team."
+            </div>
+            <div class="attribution">— GTM Leadership Team</div>
+        </section>
+
+        <section class="moments-section">
+            <h3 class="moments-title">Star Moments</h3>
+            <div class="moments-grid">
+                <div class="moment-card">
+                    <strong>Record-Breaking Performance</strong>
+                    Shattered her quarterly attainment goals by closing 8 individual deals valued at $570,000.
+                </div>
+                <div class="moment-card">
+                    <strong>Unrivaled Consistency</strong>
+                    Maintained a powerful, steady momentum across the entire quarter to become the highest-achieving AE this year by a wide margin.
+                </div>
+                <div class="moment-card">
+                    <strong>Team Anchor</strong>
+                    Stepped up with exceptional performance at a critical time, bringing immense stability and confidence to the sales organization.
+                </div>
+                <div class="moment-card">
+                    <strong>Culture Leader</strong>
+                    Generously dedicated her time to assist and support incoming AEs, ensuring a smoother onboarding process while leading by example.
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
